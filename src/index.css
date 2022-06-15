@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*:focus {
+	box-shadow: none !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.datePickerStyle {
+	width: 220px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.datepicker {
+	position: absolute !important;
+	bottom: -100px !important;
+}
+
+form {
+	width: 100% !important ;
+	min-height: 100% !important;
 }
