@@ -5,7 +5,7 @@ const Header = ({ heading, date }) => {
 	return (
 		<HStack color='#646D82' w='100%' justifyContent='space-between' p='5'>
 			<HStack>
-				<Image src={logo} alt='Logo' />
+				<Image src={logo} alt='Logo' onClick={(window.location.href = '/')} />
 				<VStack px='5'>
 					<Text as='p' fontSize='18px'>
 						{heading}
