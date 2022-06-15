@@ -4,7 +4,6 @@ import Header from '../components/Header';
 import axios from 'axios';
 import Dataset from '../components/Dataset.json';
 const Products = () => {
-	const [productInfo, setProductInfo] = useState([]);
 	const health = [];
 	const finance = [];
 	const technology = [];
@@ -14,7 +13,6 @@ const Products = () => {
 			if (data.category === 'Health Care') health.push(data);
 			if (data.category === 'Finance') finance.push(data);
 			if (data.category === 'Technology') technology.push(data);
-			console.log(finance);
 		});
 	}, []);
 	const displayProducts = () => {
@@ -30,17 +28,36 @@ const Products = () => {
 		return (
 			<VStack color='#4CA07A' w='100%' alignItems='flex-start'>
 				<Heading fontSize='28px'>Products</Heading>
-				<HStack>
+				<HStack w='100%' justifyContent='space-evenly'>
+					<VStack>
+						<Heading textDecoration='underline' fontSize='28px'>
+							Health Care
+						</Heading>
+						{health.map((healthItem, index) => {
+							<Text as='p' key={index}>
+								{healthItem}
+							</Text>;
+						})}
+					</VStack>
 					<VStack>
 						<Heading textDecoration='underline' fontSize='28px'>
 							Finance
 						</Heading>
-
-						{finance.map((item, index) => (
-							<Text as='p' key='index'>
-								{finance[0].name}
-							</Text>
-						))}
+						{finance.map((financeItem, index) => {
+							<Text as='p' key={index}>
+								{financeItem.name}
+							</Text>;
+						})}
+					</VStack>
+					<VStack>
+						<Heading textDecoration='underline' fontSize='28px'>
+							Technology
+						</Heading>
+						{technology.map((item, index) => {
+							<Text as='p' key={index}>
+								{item.name}
+							</Text>;
+						})}
 					</VStack>
 				</HStack>
 			</VStack>
