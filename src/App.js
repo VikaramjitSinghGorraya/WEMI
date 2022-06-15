@@ -12,6 +12,7 @@ function App() {
 					<Route path='/' element={<Home />} />
 					<Route path='/products' element={<Products />} />
 				</Routes>
+				<Footer />
 			</VStack>
 		</>
 	);
