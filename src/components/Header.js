@@ -10,9 +10,13 @@ const Header = ({ heading, date }) => {
 					<Text as='p' fontSize='18px'>
 						{heading}
 					</Text>
-					<HStack w='100%'>
-						<Divider minH='100%' borderColor='#2CD889' borderWidth='2px' />
-					</HStack>
+					{!date ? (
+						<HStack w='100%'>
+							<Divider minH='100%' borderColor='#2CD889' borderWidth='2px' />
+						</HStack>
+					) : (
+						''
+					)}
 				</VStack>
 			</HStack>
 			<Text as='p' fontSize='18px'>
